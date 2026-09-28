@@ -149,7 +149,7 @@ def scan_lean_files():
         if not file_number.isdigit():
             continue
         filepath = os.path.join(ERDOS_DIR, fname)
-        with open(filepath) as f:
+        with open(filepath, encoding="utf-8") as f:
             content = f.read()
 
         # Check if file has any formal_proof attribute
